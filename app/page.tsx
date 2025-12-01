@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useAuthToken } from "./hooks/useAuth";
-import { useSales } from "./hooks/useSales";
+import { useAuthToken } from "../hooks/useAuth";
+import { useSales } from "../hooks/useSales";
 import Filters from "./components/Filters";
 import SalesChart from "./components/SalesChart";
 import SalesTable from "./components/SalesTable";
@@ -10,7 +10,7 @@ import Pagination from "./components/Pagination";
 
 export default function Dashboard() {
   const { data: token, isLoading: tokenLoading } = useAuthToken();
-  console.log("token", token)
+  console.log("token is", token)
 
   const [filters, setFilters] = useState({
     startDate: "",
