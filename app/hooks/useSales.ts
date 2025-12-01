@@ -6,7 +6,7 @@ export function useSales(token: string, filters: any) {
     queryKey: ["sales", filters],
     queryFn: () => getSales({ token, ...filters }),
     enabled: !!token,
-    staleTime: 1000 * 60 * 3, // 3 minutes
-    placeholderData: keepPreviousData, // ⬅️ instead of keepPreviousData: true
+    staleTime: 1000 * 60 * 3,
+    placeholderData: keepPreviousData,
   });
 }

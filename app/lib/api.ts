@@ -17,7 +17,6 @@ export async function getAuthorize() {
 }
 
 export async function getSales(params: any) {
-  // Only include non-empty filters
   const queryObj: Record<string, string> = {};
   if (params.startDate) queryObj.startDate = params.startDate;
   if (params.endDate) queryObj.endDate = params.endDate;
