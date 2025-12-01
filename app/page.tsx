@@ -33,10 +33,10 @@ export default function Dashboard() {
   const sales = data?.results?.Sales || [];
   const pagination = data?.pagination || {};
 
-  if (tokenLoading) return <div>Loading...</div>;
+  if (tokenLoading) return <div className=" px-4 sm:px-6 lg:px-8 py-6 h-screen w-screen flex items-center justify-center text-red-600">Loading...</div>;
 
   return (
-    <div className="p-6 space-y-6 max-w-6xl mx-auto">
+    <div className="p-6 space-y-6 max-w-6xl mx-auto min-h-screen px-4 sm:px-6 lg:px-8 py-6">
       <h1 className="text-3xl font-bold">Sales Dashboard</h1>
 
       <Filters filters={filters} setFilters={setFilters} />
